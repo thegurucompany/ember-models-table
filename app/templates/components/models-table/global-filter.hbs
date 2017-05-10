@@ -1,10 +1,24 @@
-<div class="{{classes.globalFilterWrapper}}">
-  <div class="form-inline globalSearch">
-    <div class="form-group">
-      <label>{{messages.searchLabel}}</label> {{input type="text" value=filterString class=(concat classes.input " filterString") enter="" placeholder=messages.searchPlaceholder}}
-      {{#if globalFilterUsed}}
-        <span onclick={{action (mut filterString) ""}} class="clearFilterIcon {{classes.clearFilterIcon}}"></span>
-      {{/if}}
-    </div>
+<div class="{{classes.globalFilterWrapper}} col-xs-12 table-filter">
+  <div class="input-group">
+    <span class="input-group-addon">
+      <span class="fa fa-search"></span>
+    </span>
+    {{input
+      type="text"
+      value=filterString
+      class=(concat classes.input " form-control")
+      enter=""
+      placeholder=messages.searchLabel
+    }}
+    {{#if globalFilterUsed}}
+    <span class="input-group-btn">
+      <button
+        onclick={{action (mut filterString) ""}}
+        class="btn btn-info btn-flat"
+        type="button">
+          <span class="fa fa-times"></span>
+      </button>
+    </span>
+    {{/if}}
   </div>
 </div>

@@ -90,12 +90,14 @@ const defaultCssClasses = {
   tfooterWrapper: 'table-footer clearfix',
   footerSummary: 'table-summary',
   footerSummaryNumericPagination: 'col-md-4 col-sm-4 col-xs-4',
-  footerSummaryDefaultPagination: 'col-md-5 col-sm-5 col-xs-5',
+  //
+  footerSummaryDefaultPagination: 'col-sm-6 col-xs-12',
   pageSizeWrapper: 'col-md-2 col-sm-2 col-xs-2',
   pageSizeSelectWrapper: 'pull-right',
   paginationWrapper: 'table-nav',
   paginationWrapperNumeric: 'col-md-6 col-sm-6 col-xs-6',
-  paginationWrapperDefault: 'col-md-5 col-sm-5 col-xs-5',
+  //
+  paginationWrapperDefault: 'col-sm-6 col-xs-12',
   buttonDefault: 'btn btn-default',
   noDataCell: '',
   collapseRow: 'collapse-row',
@@ -533,7 +535,7 @@ export default Component.extend({
    * @name ModelsTable#_selectedItems
    */
   _selectedItems: null,
-  
+
   /**
    * Allow or disallow to select rows on click
    * If `false` - no row can be selected
@@ -633,7 +635,7 @@ export default Component.extend({
   anyFilterUsed: computed('globalFilterUsed', 'processedColumns.@each.filterUsed', function () {
     return get(this, 'globalFilterUsed') || get(this, 'processedColumns').isAny('filterUsed');
   }),
-  
+
   /**
    * True if all processedColumns dosn't use filtering and sorting
    *
