@@ -45,15 +45,19 @@ const assign = Object.assign || Ember.assign || assignPoly; // for Ember 2.4
 const NOT_SORTED = -1;
 
 const defaultMessages = {
-  searchLabel: 'Search:',
+  searchLabel: 'Buscar:',
   searchPlaceholder: '',
-  'columns-title': 'Columns',
-  'columns-showAll': 'Show All',
-  'columns-hideAll': 'Hide All',
-  'columns-restoreDefaults': 'Restore Defaults',
-  tableSummary: 'Show %@ - %@ of %@',
-  allColumnsAreHidden: 'All columns are hidden. Use <strong>columns</strong>-dropdown to show some of them',
-  noDataToShow: 'No records to show'
+  groupByLabel: 'Ordenar por:',
+  'columns-title': 'Columnas',
+  'columns-showAll': 'Ver todo',
+  'columns-hideAll': 'Esconder todo',
+  'columns-restoreDefaults': 'Restaurar a los valores predeterminados',
+  tableSummary: 'Mostrando página %@ - %@ de %@',
+  allColumnsAreHidden: 'Todas las columnas estan ocultas. Usa <strong>dropdown</strong> para ver las demas',
+  noDataToShow: 'No se encontraron registros',
+  editRowButtonLabel: 'Editar',
+  saveRowButtonLabel: 'Guardar',
+  cancelRowButtonLabel: 'Cancelar'
 };
 
 const defaultIcons = {
